@@ -33,7 +33,7 @@ public class TurmaController {
 		
 		repository.save(turma);
 		
-		URI uri = uriBuilder.path("/turma/{id}").buildAndExpand("{id}", turma.getId()).toUri();
+		URI uri = uriBuilder.path("/turmas/{id}").buildAndExpand(turma.getId()).toUri();
 		return ResponseEntity.created(uri).body(new TurmaResponse(turma));
 		
 	}

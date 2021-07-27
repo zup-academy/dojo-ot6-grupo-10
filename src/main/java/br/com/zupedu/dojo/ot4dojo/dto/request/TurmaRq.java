@@ -3,6 +3,7 @@ package br.com.zupedu.dojo.ot4dojo.dto.request;
 import java.time.LocalDate;
 
 import javax.validation.constraints.Future;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -12,7 +13,7 @@ import br.com.zupedu.dojo.ot4dojo.entity.Turma;
 
 public class TurmaRq {
 	
-	@NotNull
+	@NotEmpty
 	@Length(max=50)
 	private String nome;
 	@NotNull
@@ -23,7 +24,7 @@ public class TurmaRq {
 	private LocalDate dataFim;
 
 	@JsonCreator
-	public TurmaRq(@NotNull @Length(max = 50) String nome, @NotNull @Future LocalDate dataInicio,
+	public TurmaRq(@NotEmpty @Length(max = 50) String nome, @NotNull @Future LocalDate dataInicio,
 			@NotNull @Future LocalDate dataFim) {
 		this.nome = nome;
 		this.dataInicio = dataInicio;
