@@ -24,9 +24,7 @@ public class TurmaController {
 
 	@Autowired
 	private TurmaRepository repository;
-	
-	private SimpleDateFormat dateFormat;
-	
+
 	@PostMapping
 	@Transactional
 	public ResponseEntity<TurmaResponse> save(@RequestBody @Valid TurmaRq turmaRq, UriComponentsBuilder uriBuilder) {

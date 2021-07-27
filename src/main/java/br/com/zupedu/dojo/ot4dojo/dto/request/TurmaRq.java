@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import org.hibernate.validator.constraints.Length;
 
 import br.com.zupedu.dojo.ot4dojo.entity.Turma;
@@ -21,6 +22,7 @@ public class TurmaRq {
 	@Future
 	private LocalDate dataFim;
 
+	@JsonCreator
 	public TurmaRq(@NotNull @Length(max = 50) String nome, @NotNull @Future LocalDate dataInicio,
 			@NotNull @Future LocalDate dataFim) {
 		this.nome = nome;
