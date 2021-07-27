@@ -21,8 +21,7 @@ public class Turma {
 	public Turma() {
 	}
 	
-	public Turma(Long id, String nome, LocalDate dataInicio, LocalDate dataFim) {
-		this.id = id;
+	public Turma(String nome, LocalDate dataInicio, LocalDate dataFim) {
 		this.nome = nome;
 		this.dataInicio = dataInicio;
 		this.dataFim = dataFim;
